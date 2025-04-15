@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Lutfi 💖</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Background video -->
+  <video autoplay muted loop id="bgVideo">
+    <source src="assets/bg.mp4" type="video/mp4" />
+  </video>
+  <div class="overlay"></div>
+
+  <!-- Background slideshow untuk page 2 -->
+  <div id="bgSlides" class="hidden"></div>
+
+  <!-- Music -->
+  <audio id="bgMusic" autoplay loop>
+    <source src="assets/music.mp3" type="audio/mpeg" />
+    Browsermu tidak mendukung audio.
+  </audio>  
+
+  <!-- PAGE 1 -->
+  <section class="page show" id="page1">
+    <h1 class="fancy-font">Selamat Ulang Tahun<br>Lutfi Wafiq Nur Azizah 🎉</h1>
+    <p class="subtext">Semoga harimu seindah senyumanmu ✨</p>
+    <button onclick="nextPage(2)">Klik untuk lanjut 💌</button>
+  </section>
+
+  <!-- PAGE 2 -->
+  <section class="page hidden" id="page2">
+    <h2>📸 Kenangan Kita</h2>
+    <div class="gallery gallery-popup">
+      <img src="assets/kenangan1.jpg" alt="Kenangan 1" />
+      <img src="assets/kenangan2.jpg" alt="Kenangan 2" />
+      <img src="assets/kenangan3.jpg" alt="Kenangan 3" />
+    </div>
+    <button onclick="nextPage(3)">Lanjut ke cerita awal kita 💕</button>
+  </section>  
+
+  <!-- PAGE 3 -->
+  <section class="page hidden" id="page3">
+    <h2>💖 Awal Ketemu</h2>
+    <p class="story">
+      Aku masih inget banget waktu pertama kali ketemu kamu...<br />
+      Rasanya hangat, kayak ketemu seseorang yang udah lama aku cari.<br />
+      Dari situ, aku tahu... kamu bakal jadi orang yang spesial.
+    </p>
+    <button onclick="nextPage(4)">Sekarang giliran kamu 😊</button>
+  </section>
+
+  <!-- PAGE 4 -->
+  <section class="page hidden" id="page4">
+    <h2>📝 Ungkapan dari Kamu</h2>
+    <p>Tulis apa pun yang kamu mau sampaikan ke aku 💌</p>
+    <textarea id="pesanLutfi" placeholder="Tulis di sini ya..."></textarea>
+    <button onclick="kirimPesan()">Kirim ke kamu ❤️</button>
+    <p id="notif" class="hidden">Pesanmu udah terkirim ke aku 🥰</p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
